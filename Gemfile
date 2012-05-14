@@ -31,6 +31,8 @@ gem 'paperclip', '~> 3.0'
 # Twitter Bootstrap
 gem 'twitter-bootstrap-rails'
 
+# Use Thin webserver
+gem 'thin'
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
