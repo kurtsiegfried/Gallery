@@ -28,6 +28,9 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # Image Attachments
 gem 'paperclip', '~> 3.0'
 
+# Twitter Bootstrap
+gem 'twitter-bootstrap-rails'
+
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 

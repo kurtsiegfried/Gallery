@@ -9,10 +9,24 @@
   <b>Description:</b>
   <%= @image.description %>
 </p>
+<ul class="nav">
+<li><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
+<li><script type="text/javascript" src="http://www.reddit.com/static/button/button1.js"></script></li>
 
+<li>
+<g:plusone size="small" annotation="inline" width="120"></g:plusone>
+
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+</li>
+</ul>
 <%= image_tag @image.avatar.url %>
-<%= image_tag @image.avatar.url(:medium) %>
-<%= image_tag @image.avatar.url(:thumb) %>
-
-<%= link_to 'Edit', edit_image_path(@image) %> |
-<%= link_to 'Back', images_path %>
+<br>
+<center><%= link_to 'Back', images_path %></center>

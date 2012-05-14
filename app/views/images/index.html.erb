@@ -8,8 +8,12 @@
 	</tr>
 	<tr>
 <% end %>
-	<td><%= link_to image_tag(image.avatar.url(:medium)),image %>
-    <h4><%= image.title %></h4></td>
+	<td>
+		<figure>
+		<%= link_to image_tag(image.avatar.url(:medium)),image %>
+    	<figcaption><h4><%= image.title %></h4></figcaption>
+		</figure>
+	</td>
 
 <% end %>
 </tr>
@@ -17,4 +21,4 @@
 
 <br />
 
-<center><%= link_to 'New Image', new_image_path %></center>
+<center><%= link_to 'New Image', new_image_path, :class=>"btn btn-primary btn-large" %></center>
