@@ -1,29 +1,20 @@
-<h1>Listing images</h1>
+<center><h1>Photo Gallery</h1></center>
 
 <table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Thumb url</th>
-    <th>Full url</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @images.each do |image| %>
-  <tr>
-    <td><%= image.title %></td>
-    <td><%= image.description %></td>
-    <td><%= image.thumb_url %></td>
-    <td><%= image.full_url %></td>
-    <td><%= link_to 'Show', image %></td>
-    <td><%= link_to 'Edit', edit_image_path(image) %></td>
-    <td><%= link_to 'Destroy', image, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+  
+<tr>
+<% @images.each_with_index do |image,index| %>
+<% if index%3 == 0 && index !=0 %>
+	</tr>
+	<tr>
 <% end %>
+	<td><%= link_to image_tag(image.avatar.url(:medium)),image %>
+    <h4><%= image.title %></h4></td>
+
+<% end %>
+</tr>
 </table>
 
 <br />
 
-<%= link_to 'New Image', new_image_path %>
+<center><%= link_to 'New Image', new_image_path %></center>

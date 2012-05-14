@@ -10,16 +10,9 @@
   <%= @image.description %>
 </p>
 
-<p>
-  <b>Thumb url:</b>
-  <%= @image.thumb_url %>
-</p>
-
-<p>
-  <b>Full url:</b>
-  <%= @image.full_url %>
-</p>
-
+<%= image_tag @image.avatar.url %>
+<%= image_tag @image.avatar.url(:medium) %>
+<%= image_tag @image.avatar.url(:thumb) %>
 
 <%= link_to 'Edit', edit_image_path(@image) %> |
 <%= link_to 'Back', images_path %>
