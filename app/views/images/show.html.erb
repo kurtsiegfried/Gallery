@@ -9,6 +9,9 @@
   <b>Description:</b>
   <%= @image.description %>
 </p>
+
+
+<h4>Share on your favorite sites:</h4>
 <ul class="nav">
 <li><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
@@ -27,6 +30,7 @@
 </script>
 </li>
 </ul>
+
 <%= image_tag @image.avatar.url %>
 <br>
 <center><%= link_to 'Back', images_path %></center>
